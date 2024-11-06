@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\david\\OneDrive\\Desktop\\School\\HAGI\\DasMonogameProject\\BrickBreakerGame\\BrickBreaker_Test\\BrickBreaker_Test.csproj": {}
+    "C:\\Users\\david\\OneDrive\\Desktop\\School\\HAGI\\DasMonogameProject\\BrickBreakerGame\\BrickBreaker_Test\\BrickBreakerGame.csproj": {}
   },
   "projects": {
-    "C:\\Users\\david\\OneDrive\\Desktop\\School\\HAGI\\DasMonogameProject\\BrickBreakerGame\\BrickBreaker_Test\\BrickBreaker_Test.csproj": {
+    "C:\\Users\\david\\OneDrive\\Desktop\\School\\HAGI\\DasMonogameProject\\BrickBreakerGame\\BrickBreaker_Test\\BrickBreakerGame.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\david\\OneDrive\\Desktop\\School\\HAGI\\DasMonogameProject\\BrickBreakerGame\\BrickBreaker_Test\\BrickBreaker_Test.csproj",
-        "projectName": "BrickBreaker_Test",
-        "projectPath": "C:\\Users\\david\\OneDrive\\Desktop\\School\\HAGI\\DasMonogameProject\\BrickBreakerGame\\BrickBreaker_Test\\BrickBreaker_Test.csproj",
+        "projectUniqueName": "C:\\Users\\david\\OneDrive\\Desktop\\School\\HAGI\\DasMonogameProject\\BrickBreakerGame\\BrickBreaker_Test\\BrickBreakerGame.csproj",
+        "projectName": "BrickBreakerGame",
+        "projectPath": "C:\\Users\\david\\OneDrive\\Desktop\\School\\HAGI\\DasMonogameProject\\BrickBreakerGame\\BrickBreaker_Test\\BrickBreakerGame.csproj",
         "packagesPath": "C:\\Users\\david\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\david\\OneDrive\\Desktop\\School\\HAGI\\DasMonogameProject\\BrickBreakerGame\\BrickBreaker_Test\\obj\\",
         "projectStyle": "PackageReference",
