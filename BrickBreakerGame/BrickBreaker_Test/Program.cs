@@ -1,3 +1,3 @@
 ﻿
-using var game = new BrickBreaker_Test.GameWorld();
+using var game = new BrickBreakerGame.GameWorld();
 game.Run();

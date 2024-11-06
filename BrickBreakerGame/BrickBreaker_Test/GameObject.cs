@@ -2,7 +2,7 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 
-namespace BrickBreaker_Test
+namespace BrickBreakerGame
 {
     public abstract class GameObject
     {

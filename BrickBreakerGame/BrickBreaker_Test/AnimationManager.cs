@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BrickBreaker_Test
+namespace BrickBreakerGame
 {
     internal class AnimationManager
     {
