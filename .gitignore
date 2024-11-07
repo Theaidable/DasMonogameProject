@@ -1,0 +1,50 @@
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Build results
+bin/
+obj/
+
+# Monogame specifikke filer
+FileContentIndex/
+Content/bin/
+*.mgcb.cache
+*.xnb
+
+# NuGet
+*.nupkg
+# Packages folder can be ignored because of Package Restore
+**/packages/*
+# Uncomment if necessary, generally it is better to restore packages before committing
+#!**/packages/repositories.config
+
+# Temporary files
+*.tmp
+*.temp
+*.cache
+*.log
+
+# Backup & Logs
+*.bak
+*.old
+*.orig
+*.sav
+*.err
+*.log
+
+# MacOS specific
+.DS_Store
+
+# Windows specific
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# IDE Specific
+.idea/
+*.sln.iml
+*.iml
