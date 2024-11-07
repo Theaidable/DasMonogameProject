@@ -11,6 +11,11 @@ namespace BrickBreakerGame
         protected Vector2 origin;
         private static Texture2D collisionTexture;
 
+        public Vector2 Position
+        {
+            get { return position; }
+        }
+
         // Egenskab der giver en Rectangle for kollisionsboksen
         public Rectangle CollisionBox
         {

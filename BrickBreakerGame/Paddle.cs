@@ -19,7 +19,7 @@ namespace BrickBreakerGame
         public override void LoadContent(ContentManager content)
         {
             // Indlæs paddle-sprite
-            sprite = content.Load<Texture2D>("tile_racoon");
+            sprite = content.Load<Texture2D>("black_paddle");
             origin = new Vector2(sprite.Width / 2, sprite.Height / 2);
         }
 
@@ -32,6 +32,8 @@ namespace BrickBreakerGame
         {
             // Implementeres senere, men dette er collider event kode
         }
+
+
 
         private void Move(GameTime gameTime)
         {

@@ -50,6 +50,10 @@ namespace BrickBreakerGame
             paddle.LoadContent(Content);
             AddGameObject(paddle);
 
+            Ball ball = new Ball();
+            ball.LoadContent(Content);
+            AddGameObject(ball);
+
         }
 
         protected override void Update(GameTime gameTime)
@@ -61,6 +65,18 @@ namespace BrickBreakerGame
             foreach (GameObject gameObject in gameObjects)
             {
                 gameObject.Update(gameTime);
+            }
+
+            for (int i = 0; i < gameObjects.Count; i++)
+            {
+                for (int j = 0; j < gameObjects.Count; j++)
+                {
+                    if (gameObjects[i].CheckCollision(gameObjects[j]))
+                    {
+                        gameObjects[i].OnCollision(gameObjects[j]);
+                        gameObjects[j].OnCollision(gameObjects[i]);
+                    }
+                }
             }
 
             base.Update(gameTime);

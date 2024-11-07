@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
+using System;
 
 namespace BrickBreakerGame
 {
@@ -9,17 +10,24 @@ namespace BrickBreakerGame
         private float speed;
         private Vector2 direction;
 
-        public Ball()
+        public Ball(Paddle paddle)
         {
             speed = 400f; // Juster efter spillets ønskede sværhedsgrad
-            direction = new Vector2(1, -1); // Start retning
+
+            // Tilføj lidt tilfældighed til boldens startretning
+            Random random = new Random();
+            float randomDirectionX = (float)(random.NextDouble() * 2 - 1); // Generer mellem -1 og 1
+
+            direction = new Vector2(randomDirectionX, -1); // Start retning
             direction.Normalize(); // Sikrer, at retningen er enhedslængde
-            position = new Vector2(GameWorld.Width / 2, GameWorld.Height / 2); // Startposition i midten
+
+            // Placer bolden over paddlen
+            position = new Vector2(paddle.position.X, paddle.position.Y - paddle.sprite.Height / 2 - sprite.Height / 2 - 5);
         }
 
         public override void LoadContent(ContentManager content)
         {
-            sprite = content.Load<Texture2D>("ball_texture"); // Erstat "ball_texture" med din faktiske sprite
+            sprite = content.Load<Texture2D>("black_ball"); // Erstat "ball_texture" med din faktiske sprite
             origin = new Vector2(sprite.Width / 2, sprite.Height / 2);
         }
 
@@ -45,8 +53,21 @@ namespace BrickBreakerGame
 
         public override void OnCollision(GameObject other)
         {
-            // Eksempel på kollision med paddle eller mursten
-            if (other is Paddle || other is Brick)
+            if (other is Paddle paddle)
+            {
+                //Differencen mellem boldens position og paddlens position
+                float offset = position.X - paddle.position.X;
+
+                //Normaliser offset for at få en værdi mellem -1 og 1
+                float normalizedOffset = offset / (paddle.sprite.Width / 2);
+
+                //Bestem en ny vinkel baseret på offset
+                direction = new Vector2(normalizedOffset, -1);
+
+                //Normaliser retningen så hastigheden forbliver konstant
+                direction.Normalize();
+            }
+            else if(other is Brick)
             {
                 direction.Y *= -1; // Vend den lodrette retning
                 // Yderligere logik kan tilføjes for præcise kollisioner
