@@ -52,6 +52,10 @@ namespace BrickBreakerGame
 
             Ball ball = new Ball();
             ball.LoadContent(Content);
+
+            // Nu hvor boldens sprite er indlæst, kan vi sætte startpositionen
+            ball.Position = new Vector2(paddle.Position.X, paddle.Position.Y - paddle.Sprite.Height / 2 - ball.Sprite.Height / 2 - 5);
+
             AddGameObject(ball);
 
         }

@@ -11,9 +11,18 @@ namespace BrickBreakerGame
         protected Vector2 origin;
         private static Texture2D collisionTexture;
 
+        // Offentlig egenskab til at få adgang til position
         public Vector2 Position
         {
             get { return position; }
+            set { position = value; }
+        }
+
+        // Offentlig egenskab til at få adgang til sprite
+        public Texture2D Sprite
+        {
+            get { return sprite; }
+            set { sprite = value; }
         }
 
         // Egenskab der giver en Rectangle for kollisionsboksen

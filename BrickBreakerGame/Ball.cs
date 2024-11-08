@@ -10,9 +10,9 @@ namespace BrickBreakerGame
         private float speed;
         private Vector2 direction;
 
-        public Ball(Paddle paddle)
+        public Ball()
         {
-            speed = 400f; // Juster efter spillets ønskede sværhedsgrad
+            speed = 200f; // Juster efter spillets ønskede sværhedsgrad
 
             // Tilføj lidt tilfældighed til boldens startretning
             Random random = new Random();
@@ -20,9 +20,6 @@ namespace BrickBreakerGame
 
             direction = new Vector2(randomDirectionX, -1); // Start retning
             direction.Normalize(); // Sikrer, at retningen er enhedslængde
-
-            // Placer bolden over paddlen
-            position = new Vector2(paddle.position.X, paddle.position.Y - paddle.sprite.Height / 2 - sprite.Height / 2 - 5);
         }
 
         public override void LoadContent(ContentManager content)
@@ -56,10 +53,10 @@ namespace BrickBreakerGame
             if (other is Paddle paddle)
             {
                 //Differencen mellem boldens position og paddlens position
-                float offset = position.X - paddle.position.X;
+                float offset = position.X - paddle.Position.X;
 
                 //Normaliser offset for at få en værdi mellem -1 og 1
-                float normalizedOffset = offset / (paddle.sprite.Width / 2);
+                float normalizedOffset = offset / (paddle.Sprite.Width / 2);
 
                 //Bestem en ny vinkel baseret på offset
                 direction = new Vector2(normalizedOffset, -1);
@@ -67,7 +64,7 @@ namespace BrickBreakerGame
                 //Normaliser retningen så hastigheden forbliver konstant
                 direction.Normalize();
             }
-            else if(other is Brick)
+            else if (other is Brick)
             {
                 direction.Y *= -1; // Vend den lodrette retning
                 // Yderligere logik kan tilføjes for præcise kollisioner
