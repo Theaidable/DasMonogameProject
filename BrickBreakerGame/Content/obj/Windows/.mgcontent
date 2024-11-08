@@ -4,9 +4,13 @@
   <Platform>Windows</Platform>
   <Config />
   <SourceFiles>
-    <File>C:/Users/david/source/repos/BrickBreakerGame_Test/BrickBreaker_Test/Content/tile_racoon.png</File>
+    <File>C:/Users/david/OneDrive/Desktop/School/HAGI/DasMonogameProject/BrickBreakerGame/Content/black_ball.png</File>
+    <File>C:/Users/david/OneDrive/Desktop/School/HAGI/DasMonogameProject/BrickBreakerGame/Content/black_paddle.png</File>
+    <File>C:/Users/david/OneDrive/Desktop/School/HAGI/DasMonogameProject/BrickBreakerGame/Content/tile_racoon.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
   </DestFiles>
 </SourceFileCollection>

@@ -50,6 +50,14 @@ namespace BrickBreakerGame
             paddle.LoadContent(Content);
             AddGameObject(paddle);
 
+            Ball ball = new Ball();
+            ball.LoadContent(Content);
+
+            // Nu hvor boldens sprite er indlæst, kan vi sætte startpositionen
+            ball.Position = new Vector2(paddle.Position.X, paddle.Position.Y - paddle.Sprite.Height / 2 - ball.Sprite.Height / 2 - 5);
+
+            AddGameObject(ball);
+
         }
 
         protected override void Update(GameTime gameTime)
@@ -61,6 +69,18 @@ namespace BrickBreakerGame
             foreach (GameObject gameObject in gameObjects)
             {
                 gameObject.Update(gameTime);
+            }
+
+            for (int i = 0; i < gameObjects.Count; i++)
+            {
+                for (int j = 0; j < gameObjects.Count; j++)
+                {
+                    if (gameObjects[i].CheckCollision(gameObjects[j]))
+                    {
+                        gameObjects[i].OnCollision(gameObjects[j]);
+                        gameObjects[j].OnCollision(gameObjects[i]);
+                    }
+                }
             }
 
             base.Update(gameTime);
