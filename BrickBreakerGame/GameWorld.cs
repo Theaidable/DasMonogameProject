@@ -11,9 +11,11 @@ namespace BrickBreakerGame
         private SpriteBatch _spriteBatch;
 
         private List<GameObject> gameObjects;
+        private List<GameObject> removeObjects;
 
         public static int Width { get; private set; }
         public static int Height { get; private set; }
+        public static GameWorld Instance { get; private set; }
 
         public GameWorld()
         {
@@ -28,6 +30,7 @@ namespace BrickBreakerGame
 
             //Initialsier liste med alle game objects
             gameObjects = new List<GameObject>();
+            removeObjects = new List<GameObject>();
 
             // Initialiser skærmstørrelse
             Width = _graphics.PreferredBackBufferWidth;
@@ -52,12 +55,9 @@ namespace BrickBreakerGame
 
             Ball ball = new Ball();
             ball.LoadContent(Content);
-
             // Nu hvor boldens sprite er indlæst, kan vi sætte startpositionen
             ball.Position = new Vector2(paddle.Position.X, paddle.Position.Y - paddle.Sprite.Height / 2 - ball.Sprite.Height / 2 - 5);
-
             AddGameObject(ball);
-
         }
 
         protected override void Update(GameTime gameTime)
@@ -83,6 +83,12 @@ namespace BrickBreakerGame
                 }
             }
 
+            foreach (GameObject gameObject in removeObjects)
+            {
+                gameObjects.Remove(gameObject);
+            }
+            removeObjects.Clear();
+
             base.Update(gameTime);
         }
 
@@ -106,6 +112,14 @@ namespace BrickBreakerGame
         public void AddGameObject(GameObject newObject)
         {
             gameObjects.Add(newObject);
+        }
+
+        public void RemoveGameObject(GameObject removeObject)
+        {
+            if (!removeObjects.Contains(removeObject))
+            {
+                removeObjects.Add(removeObject);
+            }
         }
 
         public static float DeltaTime(GameTime gameTime)
