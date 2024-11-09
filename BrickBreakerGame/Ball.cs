@@ -24,7 +24,7 @@ namespace BrickBreakerGame
 
         public override void LoadContent(ContentManager content)
         {
-            sprite = content.Load<Texture2D>("black_ball"); // Erstat "ball_texture" med din faktiske sprite
+            sprite = content.Load<Texture2D>("black_ball");
             origin = new Vector2(sprite.Width / 2, sprite.Height / 2);
         }
 
