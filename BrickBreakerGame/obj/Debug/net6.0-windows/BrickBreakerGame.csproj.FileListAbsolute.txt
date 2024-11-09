@@ -78,3 +78,6 @@ C:\Users\david\OneDrive\Desktop\School\HAGI\DasMonogameProject\BrickBreakerGame\
 C:\Users\david\OneDrive\Desktop\School\HAGI\DasMonogameProject\BrickBreakerGame\obj\Debug\net6.0-windows\BrickBreakerGame.genruntimeconfig.cache
 C:\Users\david\OneDrive\Desktop\School\HAGI\DasMonogameProject\BrickBreakerGame\obj\Debug\net6.0-windows\ref\BrickBreakerGame.dll
 C:\Users\david\OneDrive\Desktop\School\HAGI\DasMonogameProject\BrickBreakerGame\bin\Debug\net6.0-windows\Content\black_paddle.xnb
+D:\Git\DasMonogameProject\BrickBreakerGame\obj\Debug\net6.0-windows\BrickBreakerGame.dll
+D:\Git\DasMonogameProject\BrickBreakerGame\obj\Debug\net6.0-windows\refint\BrickBreakerGame.dll
+D:\Git\DasMonogameProject\BrickBreakerGame\obj\Debug\net6.0-windows\BrickBreakerGame.pdb
