@@ -81,3 +81,6 @@ C:\Users\david\OneDrive\Desktop\School\HAGI\DasMonogameProject\BrickBreakerGame\
 D:\Git\DasMonogameProject\BrickBreakerGame\obj\Debug\net6.0-windows\BrickBreakerGame.dll
 D:\Git\DasMonogameProject\BrickBreakerGame\obj\Debug\net6.0-windows\refint\BrickBreakerGame.dll
 D:\Git\DasMonogameProject\BrickBreakerGame\obj\Debug\net6.0-windows\BrickBreakerGame.pdb
+D:\Github Repos\DasMonogameProject\BrickBreakerGame\obj\Debug\net6.0-windows\BrickBreakerGame.dll
+D:\Github Repos\DasMonogameProject\BrickBreakerGame\obj\Debug\net6.0-windows\refint\BrickBreakerGame.dll
+D:\Github Repos\DasMonogameProject\BrickBreakerGame\obj\Debug\net6.0-windows\BrickBreakerGame.pdb

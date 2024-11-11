@@ -4,11 +4,219 @@
   <Platform>Windows</Platform>
   <Config />
   <SourceFiles>
-    <File>D:/Git/DasMonogameProject/BrickBreakerGame/Content/black_ball.png</File>
-    <File>D:/Git/DasMonogameProject/BrickBreakerGame/Content/black_paddle.png</File>
-    <File>D:/Git/DasMonogameProject/BrickBreakerGame/Content/tile_racoon.png</File>
+    <File>D:/Github Repos/DasMonogameProject/BrickBreakerGame/Content/BallSprites/Ball000.png</File>
+    <File>D:/Github Repos/DasMonogameProject/BrickBreakerGame/Content/BallSprites/Ball001.png</File>
+    <File>D:/Github Repos/DasMonogameProject/BrickBreakerGame/Content/BallSprites/Ball002.png</File>
+    <File>D:/Github Repos/DasMonogameProject/BrickBreakerGame/Content/BallSprites/Ball003.png</File>
+    <File>D:/Github Repos/DasMonogameProject/BrickBreakerGame/Content/BallSprites/Ball004.png</File>
+    <File>D:/Github Repos/DasMonogameProject/BrickBreakerGame/Content/BallSprites/Ball006.png</File>
+    <File>D:/Github Repos/DasMonogameProject/BrickBreakerGame/Content/BallSprites/Ball007.png</File>
+    <File>D:/Github Repos/DasMonogameProject/BrickBreakerGame/Content/BallSprites/Ball008.png</File>
+    <File>D:/Github Repos/DasMonogameProject/BrickBreakerGame/Content/BallSprites/Ball009.png</File>
+    <File>D:/Github Repos/DasMonogameProject/BrickBreakerGame/Content/BallSprites/Ball010.png</File>
+    <File>D:/Github Repos/DasMonogameProject/BrickBreakerGame/Content/BallSprites/Ball012.png</File>
+    <File>D:/Github Repos/DasMonogameProject/BrickBreakerGame/Content/BallSprites/Ball013.png</File>
+    <File>D:/Github Repos/DasMonogameProject/BrickBreakerGame/Content/BallSprites/Ball014.png</File>
+    <File>D:/Github Repos/DasMonogameProject/BrickBreakerGame/Content/BallSprites/Ball015.png</File>
+    <File>D:/Github Repos/DasMonogameProject/BrickBreakerGame/Content/BallSprites/Ball016.png</File>
+    <File>D:/Github Repos/DasMonogameProject/BrickBreakerGame/Content/BallSprites/Ball018.png</File>
+    <File>D:/Github Repos/DasMonogameProject/BrickBreakerGame/Content/BallSprites/Ball019.png</File>
+    <File>D:/Github Repos/DasMonogameProject/BrickBreakerGame/Content/BallSprites/Ball020.png</File>
+    <File>D:/Github Repos/DasMonogameProject/BrickBreakerGame/Content/BallSprites/Ball021.png</File>
+    <File>D:/Github Repos/DasMonogameProject/BrickBreakerGame/Content/BallSprites/Ball022.png</File>
+    <File>D:/Github Repos/DasMonogameProject/BrickBreakerGame/Content/BallSprites/Ball024.png</File>
+    <File>D:/Github Repos/DasMonogameProject/BrickBreakerGame/Content/BallSprites/Ball025.png</File>
+    <File>D:/Github Repos/DasMonogameProject/BrickBreakerGame/Content/BallSprites/Ball026.png</File>
+    <File>D:/Github Repos/DasMonogameProject/BrickBreakerGame/Content/BallSprites/Ball027.png</File>
+    <File>D:/Github Repos/DasMonogameProject/BrickBreakerGame/Content/BallSprites/Ball028.png</File>
+    <File>D:/Github Repos/DasMonogameProject/BrickBreakerGame/Content/BallSprites/Ball030.png</File>
+    <File>D:/Github Repos/DasMonogameProject/BrickBreakerGame/Content/BallSprites/Ball031.png</File>
+    <File>D:/Github Repos/DasMonogameProject/BrickBreakerGame/Content/BallSprites/Ball032.png</File>
+    <File>D:/Github Repos/DasMonogameProject/BrickBreakerGame/Content/BallSprites/Ball033.png</File>
+    <File>D:/Github Repos/DasMonogameProject/BrickBreakerGame/Content/BallSprites/Ball034.png</File>
+    <File>D:/Github Repos/DasMonogameProject/BrickBreakerGame/Content/black_ball.png</File>
+    <File>D:/Github Repos/DasMonogameProject/BrickBreakerGame/Content/black_paddle.png</File>
+    <File>D:/Github Repos/DasMonogameProject/BrickBreakerGame/Content/BricksSlimSprites/BrickSlim000.png</File>
+    <File>D:/Github Repos/DasMonogameProject/BrickBreakerGame/Content/BricksSlimSprites/BrickSlim001.png</File>
+    <File>D:/Github Repos/DasMonogameProject/BrickBreakerGame/Content/BricksSlimSprites/BrickSlim002.png</File>
+    <File>D:/Github Repos/DasMonogameProject/BrickBreakerGame/Content/BricksSlimSprites/BrickSlim003.png</File>
+    <File>D:/Github Repos/DasMonogameProject/BrickBreakerGame/Content/BricksSlimSprites/BrickSlim004.png</File>
+    <File>D:/Github Repos/DasMonogameProject/BrickBreakerGame/Content/BricksSlimSprites/BrickSlim005.png</File>
+    <File>D:/Github Repos/DasMonogameProject/BrickBreakerGame/Content/BricksSlimSprites/BrickSlim006.png</File>
+    <File>D:/Github Repos/DasMonogameProject/BrickBreakerGame/Content/BricksSlimSprites/BrickSlim007.png</File>
+    <File>D:/Github Repos/DasMonogameProject/BrickBreakerGame/Content/BricksSlimSprites/BrickSlim008.png</File>
+    <File>D:/Github Repos/DasMonogameProject/BrickBreakerGame/Content/BricksSlimSprites/BrickSlim009.png</File>
+    <File>D:/Github Repos/DasMonogameProject/BrickBreakerGame/Content/BricksSlimSprites/BrickSlim010.png</File>
+    <File>D:/Github Repos/DasMonogameProject/BrickBreakerGame/Content/BricksSlimSprites/BrickSlim011.png</File>
+    <File>D:/Github Repos/DasMonogameProject/BrickBreakerGame/Content/BricksSlimSprites/BrickSlim012.png</File>
+    <File>D:/Github Repos/DasMonogameProject/BrickBreakerGame/Content/BricksSlimSprites/BrickSlim013.png</File>
+    <File>D:/Github Repos/DasMonogameProject/BrickBreakerGame/Content/BricksSlimSprites/BrickSlim014.png</File>
+    <File>D:/Github Repos/DasMonogameProject/BrickBreakerGame/Content/BricksSlimSprites/BrickSlim015.png</File>
+    <File>D:/Github Repos/DasMonogameProject/BrickBreakerGame/Content/BricksSlimSprites/BrickSlim016.png</File>
+    <File>D:/Github Repos/DasMonogameProject/BrickBreakerGame/Content/BricksSlimSprites/BrickSlim017.png</File>
+    <File>D:/Github Repos/DasMonogameProject/BrickBreakerGame/Content/BricksSquareSprites/BrickSquare000.png</File>
+    <File>D:/Github Repos/DasMonogameProject/BrickBreakerGame/Content/BricksSquareSprites/BrickSquare001.png</File>
+    <File>D:/Github Repos/DasMonogameProject/BrickBreakerGame/Content/BricksSquareSprites/BrickSquare002.png</File>
+    <File>D:/Github Repos/DasMonogameProject/BrickBreakerGame/Content/BricksSquareSprites/BrickSquare003.png</File>
+    <File>D:/Github Repos/DasMonogameProject/BrickBreakerGame/Content/BricksSquareSprites/BrickSquare004.png</File>
+    <File>D:/Github Repos/DasMonogameProject/BrickBreakerGame/Content/BricksSquareSprites/BrickSquare005.png</File>
+    <File>D:/Github Repos/DasMonogameProject/BrickBreakerGame/Content/BricksSquareSprites/BrickSquare006.png</File>
+    <File>D:/Github Repos/DasMonogameProject/BrickBreakerGame/Content/BricksSquareSprites/BrickSquare007.png</File>
+    <File>D:/Github Repos/DasMonogameProject/BrickBreakerGame/Content/BricksSquareSprites/BrickSquare008.png</File>
+    <File>D:/Github Repos/DasMonogameProject/BrickBreakerGame/Content/BricksSquareSprites/BrickSquare009.png</File>
+    <File>D:/Github Repos/DasMonogameProject/BrickBreakerGame/Content/BricksSquareSprites/BrickSquare010.png</File>
+    <File>D:/Github Repos/DasMonogameProject/BrickBreakerGame/Content/BricksSquareSprites/BrickSquare011.png</File>
+    <File>D:/Github Repos/DasMonogameProject/BrickBreakerGame/Content/BricksThickSprites/BrickThick000.png</File>
+    <File>D:/Github Repos/DasMonogameProject/BrickBreakerGame/Content/BricksThickSprites/BrickThick001.png</File>
+    <File>D:/Github Repos/DasMonogameProject/BrickBreakerGame/Content/BricksThickSprites/BrickThick002.png</File>
+    <File>D:/Github Repos/DasMonogameProject/BrickBreakerGame/Content/BricksThickSprites/BrickThick003.png</File>
+    <File>D:/Github Repos/DasMonogameProject/BrickBreakerGame/Content/BricksThickSprites/BrickThick004.png</File>
+    <File>D:/Github Repos/DasMonogameProject/BrickBreakerGame/Content/BricksThickSprites/BrickThick005.png</File>
+    <File>D:/Github Repos/DasMonogameProject/BrickBreakerGame/Content/BricksThickSprites/BrickThick006.png</File>
+    <File>D:/Github Repos/DasMonogameProject/BrickBreakerGame/Content/BricksThickSprites/BrickThick007.png</File>
+    <File>D:/Github Repos/DasMonogameProject/BrickBreakerGame/Content/BricksThickSprites/BrickThick008.png</File>
+    <File>D:/Github Repos/DasMonogameProject/BrickBreakerGame/Content/BricksThickSprites/BrickThick009.png</File>
+    <File>D:/Github Repos/DasMonogameProject/BrickBreakerGame/Content/BricksThickSprites/BrickThick010.png</File>
+    <File>D:/Github Repos/DasMonogameProject/BrickBreakerGame/Content/BricksThickSprites/BrickThick011.png</File>
+    <File>D:/Github Repos/DasMonogameProject/BrickBreakerGame/Content/BricksThickSprites/BrickThick012.png</File>
+    <File>D:/Github Repos/DasMonogameProject/BrickBreakerGame/Content/BricksThickSprites/BrickThick013.png</File>
+    <File>D:/Github Repos/DasMonogameProject/BrickBreakerGame/Content/BricksThickSprites/BrickThick014.png</File>
+    <File>D:/Github Repos/DasMonogameProject/BrickBreakerGame/Content/BricksThickSprites/BrickThick015.png</File>
+    <File>D:/Github Repos/DasMonogameProject/BrickBreakerGame/Content/BricksThickSprites/BrickThick016.png</File>
+    <File>D:/Github Repos/DasMonogameProject/BrickBreakerGame/Content/BricksThickSprites/BrickThick017.png</File>
+    <File>D:/Github Repos/DasMonogameProject/BrickBreakerGame/Content/LifeSprites/Life000.png</File>
+    <File>D:/Github Repos/DasMonogameProject/BrickBreakerGame/Content/LifeSprites/Life001.png</File>
+    <File>D:/Github Repos/DasMonogameProject/BrickBreakerGame/Content/LifeSprites/Life002.png</File>
+    <File>D:/Github Repos/DasMonogameProject/BrickBreakerGame/Content/LifeSprites/Life003.png</File>
+    <File>D:/Github Repos/DasMonogameProject/BrickBreakerGame/Content/LifeSprites/Life004.png</File>
+    <File>D:/Github Repos/DasMonogameProject/BrickBreakerGame/Content/LifeSprites/Life005.png</File>
+    <File>D:/Github Repos/DasMonogameProject/BrickBreakerGame/Content/LifeSprites/Life006.png</File>
+    <File>D:/Github Repos/DasMonogameProject/BrickBreakerGame/Content/LifeSprites/Life007.png</File>
+    <File>D:/Github Repos/DasMonogameProject/BrickBreakerGame/Content/PaddleSprites/Paddle000.png</File>
+    <File>D:/Github Repos/DasMonogameProject/BrickBreakerGame/Content/PaddleSprites/Paddle001.png</File>
+    <File>D:/Github Repos/DasMonogameProject/BrickBreakerGame/Content/PaddleSprites/Paddle002.png</File>
+    <File>D:/Github Repos/DasMonogameProject/BrickBreakerGame/Content/PaddleSprites/Paddle003.png</File>
+    <File>D:/Github Repos/DasMonogameProject/BrickBreakerGame/Content/PaddleSprites/Paddle004.png</File>
+    <File>D:/Github Repos/DasMonogameProject/BrickBreakerGame/Content/PaddleSprites/Paddle005.png</File>
+    <File>D:/Github Repos/DasMonogameProject/BrickBreakerGame/Content/PaddleSprites/Paddle006.png</File>
+    <File>D:/Github Repos/DasMonogameProject/BrickBreakerGame/Content/PaddleSprites/Paddle007.png</File>
+    <File>D:/Github Repos/DasMonogameProject/BrickBreakerGame/Content/PaddleSprites/Paddle008.png</File>
+    <File>D:/Github Repos/DasMonogameProject/BrickBreakerGame/Content/PaddleSprites/Paddle009.png</File>
+    <File>D:/Github Repos/DasMonogameProject/BrickBreakerGame/Content/PaddleSprites/Paddle010.png</File>
+    <File>D:/Github Repos/DasMonogameProject/BrickBreakerGame/Content/PaddleSprites/Paddle011.png</File>
+    <File>D:/Github Repos/DasMonogameProject/BrickBreakerGame/Content/PaddleSprites/Paddle012.png</File>
+    <File>D:/Github Repos/DasMonogameProject/BrickBreakerGame/Content/PaddleSprites/Paddle013.png</File>
+    <File>D:/Github Repos/DasMonogameProject/BrickBreakerGame/Content/PaddleSprites/Paddle014.png</File>
+    <File>D:/Github Repos/DasMonogameProject/BrickBreakerGame/Content/PaddleSprites/Paddle015.png</File>
+    <File>D:/Github Repos/DasMonogameProject/BrickBreakerGame/Content/PaddleSprites/Paddle016.png</File>
+    <File>D:/Github Repos/DasMonogameProject/BrickBreakerGame/Content/PaddleSprites/Paddle017.png</File>
+    <File>D:/Github Repos/DasMonogameProject/BrickBreakerGame/Content/tile_racoon.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

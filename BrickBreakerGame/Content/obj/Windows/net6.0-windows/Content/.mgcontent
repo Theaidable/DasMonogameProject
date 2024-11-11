@@ -4,9 +4,9 @@
   <Platform>Windows</Platform>
   <Config />
   <SourceFiles>
-    <File>D:/Git/DasMonogameProject/BrickBreakerGame/Content/black_ball.png</File>
-    <File>D:/Git/DasMonogameProject/BrickBreakerGame/Content/black_paddle.png</File>
-    <File>D:/Git/DasMonogameProject/BrickBreakerGame/Content/tile_racoon.png</File>
+    <File>D:/Github Repos/DasMonogameProject/BrickBreakerGame/Content/black_ball.png</File>
+    <File>D:/Github Repos/DasMonogameProject/BrickBreakerGame/Content/black_paddle.png</File>
+    <File>D:/Github Repos/DasMonogameProject/BrickBreakerGame/Content/tile_racoon.png</File>
   </SourceFiles>
   <DestFiles>
     <File xsi:nil="true" />
