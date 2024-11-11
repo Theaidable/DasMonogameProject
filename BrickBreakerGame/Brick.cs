@@ -1,55 +1,52 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BrickBreakerGame
 {
     public class Brick : GameObject
     {
         private int hitPoints;
-        private bool isIndestructable;
+        private bool isIndestructible;
+        public bool IsMarkedForRemoval { get; private set; }
 
-        public Brick(int initialHitPoints, bool indestructiable = false)
+        public Brick(int initialHitPoints, bool indestructible = false)
         {
             hitPoints = initialHitPoints;
-            isIndestructable = indestructiable;
+            isIndestructible = indestructible;
+            IsMarkedForRemoval = false;
         }
 
         public override void LoadContent(ContentManager content)
         {
-            if (isIndestructable)
+            if (isIndestructible)
             {
-                sprite = content.Load<Texture2D>("black_brick");
+                sprite = content.Load<Texture2D>("BricksSquareSprites/BrickSquare000");
             }
             else if (hitPoints == 1)
             {
-                sprite = content.Load<Texture2D>("green_brick");
+                sprite = content.Load<Texture2D>("BricksSquareSprites/BrickSquare002");
             }
             else if (hitPoints == 2)
             {
-                sprite = content.Load<Texture2D>("yellow_brick");
+                sprite = content.Load<Texture2D>("BricksSquareSprites/BrickSquare004");
             }
             else if (hitPoints == 3)
             {
-                sprite = content.Load<Texture2D>("red_brick");
+                sprite = content.Load<Texture2D>("BricksSquareSprites/BrickSquare008");
             }
 
-            origin = new Microsoft.Xna.Framework.Vector2(sprite.Width / 2, sprite.Height / 2);
+            origin = new Vector2(sprite.Width / 2, sprite.Height / 2);
         }
 
         public override void Update(GameTime gameTime)
         {
-            //Ingen opdatering løbende spillet
+            // Ingen opdatering løbende spillet
         }
 
         public override void OnCollision(GameObject other)
         {
-            if (isIndestructable) return;
+            if (isIndestructible) return;
 
             if (other is Ball)
             {
@@ -57,6 +54,7 @@ namespace BrickBreakerGame
 
                 if (hitPoints <= 0)
                 {
+                    IsMarkedForRemoval = true;
                     GameWorld.Instance.RemoveGameObject(this);
                 }
             }

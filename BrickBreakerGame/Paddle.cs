@@ -3,6 +3,7 @@ using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using System;
+
 namespace BrickBreakerGame
 {
     public class Paddle : GameObject
@@ -11,7 +12,7 @@ namespace BrickBreakerGame
 
         public Paddle()
         {
-            speed = 300f;
+            speed = 400f;
             // Startposition for paddlen i bunden af skærmen
             position = new Vector2(GameWorld.Width / 2, GameWorld.Height - 50);
         }
@@ -32,8 +33,6 @@ namespace BrickBreakerGame
         {
             // Implementeres senere, men dette er collider event kode
         }
-
-
 
         private void Move(GameTime gameTime)
         {

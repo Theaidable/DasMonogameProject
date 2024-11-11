@@ -9,6 +9,7 @@ namespace BrickBreakerGame
     {
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
+        private LevelManager levelManager;
 
         private List<GameObject> gameObjects;
         private List<GameObject> removeObjects;
@@ -22,17 +23,14 @@ namespace BrickBreakerGame
             _graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
             IsMouseVisible = true;
+            Instance = this;
         }
 
         protected override void Initialize()
         {
-            // TODO: Add your initialization logic here
-
-            //Initialsier liste med alle game objects
             gameObjects = new List<GameObject>();
             removeObjects = new List<GameObject>();
 
-            // Initialiser skærmstørrelse
             Width = _graphics.PreferredBackBufferWidth;
             Height = _graphics.PreferredBackBufferHeight;
 
@@ -43,21 +41,20 @@ namespace BrickBreakerGame
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
 
-            // TODO: use this.Content to load your game content here
-
-            //Indlæs debug-texutre i GameObject-klassen
             GameObject.LoadDebugContent(GraphicsDevice);
 
-            //Opret instans af Paddle og tilføj til gameObjects listen
+            // Opret Paddle og Ball
             Paddle paddle = new Paddle();
             paddle.LoadContent(Content);
             AddGameObject(paddle);
 
             Ball ball = new Ball();
             ball.LoadContent(Content);
-            // Nu hvor boldens sprite er indlæst, kan vi sætte startpositionen
             ball.Position = new Vector2(paddle.Position.X, paddle.Position.Y - paddle.Sprite.Height / 2 - ball.Sprite.Height / 2 - 5);
             AddGameObject(ball);
+
+            levelManager = new LevelManager(Content);
+            levelManager.CreateFirstLevel(gameObjects);
         }
 
         protected override void Update(GameTime gameTime)
@@ -65,7 +62,6 @@ namespace BrickBreakerGame
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
 
-            // TODO: Add your update logic here
             foreach (GameObject gameObject in gameObjects)
             {
                 gameObject.Update(gameTime);
@@ -73,7 +69,7 @@ namespace BrickBreakerGame
 
             for (int i = 0; i < gameObjects.Count; i++)
             {
-                for (int j = 0; j < gameObjects.Count; j++)
+                for (int j = i + 1; j < gameObjects.Count; j++)
                 {
                     if (gameObjects[i].CheckCollision(gameObjects[j]))
                     {
@@ -96,7 +92,6 @@ namespace BrickBreakerGame
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
-            // TODO: Add your drawing code here
             _spriteBatch.Begin();
 
             foreach (GameObject gameObject in gameObjects)
