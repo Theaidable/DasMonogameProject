@@ -41,6 +41,7 @@ namespace BrickBreakerGame
             MediaPlayer.IsRepeating = true; // Gentag musikken
             MediaPlayer.Play(backgroundMusic);
         }
+           
 
         public void StopBackgroundMusic()
         {
