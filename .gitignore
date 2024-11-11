@@ -11,9 +11,9 @@ obj/
 
 # Monogame specifikke filer
 FileContentIndex/
-Content/bin/
+#Content/bin/
 *.mgcb.cache
-*.xnb
+#*.xnb
 
 # NuGet
 *.nupkg
