@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BrickBreakerGame")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+78c1d3ad32496e1299920b8a303dd24b2990cd16")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4a1ea15f48de7ba4d3bdea6306fbf7b064b5d1cd")]
 [assembly: System.Reflection.AssemblyProductAttribute("BrickBreakerGame")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BrickBreakerGame")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

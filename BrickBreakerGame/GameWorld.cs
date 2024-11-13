@@ -10,6 +10,8 @@ namespace BrickBreakerGame
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
         private LevelManager levelManager;
+        public Paddle paddle;
+        public Ball ball;
 
         private List<GameObject> gameObjects;
         private List<GameObject> removeObjects;
@@ -44,11 +46,11 @@ namespace BrickBreakerGame
             GameObject.LoadDebugContent(GraphicsDevice);
 
             // Opret Paddle og Ball
-            Paddle paddle = new Paddle();
+            paddle = new Paddle();
             paddle.LoadContent(Content);
             AddGameObject(paddle);
 
-            Ball ball = new Ball();
+            ball = new Ball();
             ball.LoadContent(Content);
             ball.Position = new Vector2(paddle.Position.X, paddle.Position.Y - paddle.Sprite.Height / 2 - ball.Sprite.Height / 2 - 5);
             AddGameObject(ball);
