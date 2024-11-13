@@ -84,15 +84,28 @@ namespace BrickBreakerGame
                 gameObjects.Add(indestructibleBrick);
             }
 
+            // Tilføj PowerUps og PowerDowns til nogle af murstene
             for (int i = 0; i < gameObjects.Count; i++)
             {
                 if (gameObjects[i] is Brick brick && !brick.IsIndestructible)
                 {
                     int randomChance = random.Next(100); // Generer et tal mellem 0 og 99
-                    if (randomChance < 20) // 20% chance for en Power
+                    if (randomChance < 40) // 40% chance for en Power
                     {
-                        Power.PowerType powerType = randomChance < 10 ? Power.PowerType.PowerUp : Power.PowerType.PowerDown;
-                        string effect = powerType == Power.PowerType.PowerUp ? "IncreasePaddleSize" : "ReducePaddleSize";
+                        Power.PowerType powerType = randomChance < 20 ? Power.PowerType.PowerUp : Power.PowerType.PowerDown;
+
+                        // Vælg en tilfældig effekt afhængigt af PowerType
+                        string effect = "";
+                        if (powerType == Power.PowerType.PowerUp)
+                        {
+                            string[] possibleEffects = { "IncreasePaddleSize", "DecreaseBallSpeed"};
+                            effect = possibleEffects[random.Next(possibleEffects.Length)];
+                        }
+                        else if (powerType == Power.PowerType.PowerDown)
+                        {
+                            string[] possibleEffects = { "ReducePaddleSize", "IncreaseBallSpeed"};
+                            effect = possibleEffects[random.Next(possibleEffects.Length)];
+                        }
 
                         Power power = new Power(powerType, effect);
                         power.LoadContent(content);

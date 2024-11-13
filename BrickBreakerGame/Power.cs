@@ -81,19 +81,19 @@ namespace BrickBreakerGame
             switch (Effect)
             {
                 case "IncreasePaddleSize":
-                    paddle.IncreaseSize();
+                    paddle.IncreasePaddleSize();
                     break;
 
                 case "ReducePaddleSize":
-                    paddle.DecreaseSize();
+                    paddle.DecreasePaddleSize();
                     break;
 
                 case "IncreaseBallSpeed":
-                    ball.IncreaseSpeed();
+                    ball.IncreaseBallSpeed();
                     break;
 
                 case "ReduceBallSpeed":
-                    ball.DecreaseSpeed();
+                    ball.DecreaseBallSpeed();
                     break;
             }
 
