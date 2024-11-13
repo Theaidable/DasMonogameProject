@@ -154,19 +154,19 @@ namespace BrickBreakerGame
             switch (power.Effect)
             {
                 case "IncreasePaddleSize":
-                    paddle.DecreaseSize(); // Gør paddlen mindre igen
+                    paddle.DecreasePaddleSize(); // Gør paddlen mindre igen
                     break;
 
                 case "ReducePaddleSize":
-                    paddle.IncreaseSize(); // Gør paddlen normal igen
+                    paddle.IncreasePaddleSize(); // Gør paddlen normal igen
                     break;
 
                 case "IncreaseBallSpeed":
-                    ball.DecreaseSpeed(); // Reducer boldens hastighed til normal
+                    ball.DecreaseBallSpeed(); // Reducer boldens hastighed til normal
                     break;
 
                 case "ReduceBallSpeed":
-                    ball.IncreaseSpeed(); // Øg boldens hastighed tilbage til normal
+                    ball.IncreaseBallSpeed(); // Øg boldens hastighed tilbage til normal
                     break;
             }
         }

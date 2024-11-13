@@ -60,23 +60,23 @@ namespace BrickBreakerGame
             }
         }
 
-        public void IncreaseSize()
+        public void IncreasePaddleSize()
         {
-            // Forøg paddlens størrelse med en bestemt faktor (f.eks. 1.5 gange)
+            // Forøg paddlens størrelse med en bestemt faktor
             if (sprite != null)
             {
-                Vector2 newSize = new Vector2(sprite.Width * 1.5f, sprite.Height); // Forøger bredden med 50%
+                Vector2 newSize = new Vector2(sprite.Width * 2f, sprite.Height); // Dobbelt størrelse
                 sprite = ResizeTexture(sprite, (int)newSize.X, (int)newSize.Y);
                 origin = new Vector2(sprite.Width / 2, sprite.Height / 2);
             }
         }
 
-        public void DecreaseSize()
+        public void DecreasePaddleSize()
         {
-            // Reducer paddlens størrelse med en bestemt faktor (f.eks. 0.75 gange)
+            // Reducer paddlens størrelse med en bestemt faktor
             if (sprite != null)
             {
-                Vector2 newSize = new Vector2(sprite.Width * 0.75f, sprite.Height); // Reducerer bredden med 25%
+                Vector2 newSize = new Vector2(sprite.Width * 0.5f, sprite.Height); // Halvere størrelsen
                 sprite = ResizeTexture(sprite, (int)newSize.X, (int)newSize.Y);
                 origin = new Vector2(sprite.Width / 2, sprite.Height / 2);
             }
