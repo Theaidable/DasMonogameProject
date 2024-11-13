@@ -6,15 +6,18 @@ namespace BrickBreakerGame
 {
     public class Power : GameObject
     {
-        public enum PowerType { PowerUp, PowerDown}
+        public enum PowerType { PowerUp, PowerDown }
 
         public PowerType Type { get; set; }
 
         public string Effect { get; set; }
 
         private float speed = 150f;
+        private float duration = 5f;
+        private bool isEffectActive;
+        private float effectTimer;
 
-        public Power(PowerType type,string effect)
+        public Power(PowerType type, string effect)
         {
             Type = type;
             Effect = effect;
@@ -35,13 +38,26 @@ namespace BrickBreakerGame
 
         public override void Update(GameTime gameTime)
         {
-            // Power falder nedad
-            position.Y += speed * GameWorld.DeltaTime(gameTime);
-
-            // Hvis den når bunden af skærmen, fjernes den
-            if (position.Y > GameWorld.Height)
+            if (!isEffectActive)
             {
-                GameWorld.Instance.RemoveGameObject(this);
+                // Power falder nedad
+                position.Y += speed * GameWorld.DeltaTime(gameTime);
+
+                // Hvis den når bunden af skærmen, fjernes den fra gameObjects-listen
+                if (position.Y > GameWorld.Height)
+                {
+                    GameWorld.Instance.RemoveGameObject(this);
+                }
+            }
+            else
+            {
+                // Hvis effekten er aktiv, hold styr på timeren
+                effectTimer += GameWorld.DeltaTime(gameTime);
+
+                if (effectTimer >= duration)
+                {
+                    isEffectActive = false; // Markér effekten som færdig
+                }
             }
         }
 
@@ -50,6 +66,9 @@ namespace BrickBreakerGame
             if (other is Paddle)
             {
                 ActivateEffect();
+
+                // Tilføj til aktive effekter og fjern kun power-ikonet fra visningen
+                GameWorld.Instance.AddActivePower(this);
                 GameWorld.Instance.RemoveGameObject(this);
             }
         }
@@ -77,6 +96,27 @@ namespace BrickBreakerGame
                     ball.DecreaseSpeed();
                     break;
             }
+
+            isEffectActive = true;
+            effectTimer = 0f;
+        }
+
+        public void UpdatePowerEffect(GameTime gameTime)
+        {
+            if (isEffectActive)
+            {
+                effectTimer += GameWorld.DeltaTime(gameTime);
+
+                if (effectTimer >= duration)
+                {
+                    isEffectActive = false;
+                }
+            }
+        }
+
+        public bool IsEffectCompleted()
+        {
+            return !isEffectActive; // Returnér true, hvis effekten er færdig
         }
     }
 }

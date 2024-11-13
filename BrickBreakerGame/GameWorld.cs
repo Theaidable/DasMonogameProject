@@ -15,6 +15,7 @@ namespace BrickBreakerGame
 
         private List<GameObject> gameObjects;
         private List<GameObject> removeObjects;
+        private List<Power> activePowers;
 
         public static int Width { get; private set; }
         public static int Height { get; private set; }
@@ -32,6 +33,7 @@ namespace BrickBreakerGame
         {
             gameObjects = new List<GameObject>();
             removeObjects = new List<GameObject>();
+            activePowers = new List<Power>();
 
             Width = _graphics.PreferredBackBufferWidth;
             Height = _graphics.PreferredBackBufferHeight;
@@ -64,11 +66,16 @@ namespace BrickBreakerGame
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
 
+            // Opdater gameObjects som normalt
             foreach (GameObject gameObject in gameObjects)
             {
                 gameObject.Update(gameTime);
             }
 
+            // Opdater aktive Power-effekter
+            UpdateActivePowers(gameTime);
+
+            // Kollisionsdetektion
             for (int i = 0; i < gameObjects.Count; i++)
             {
                 for (int j = i + 1; j < gameObjects.Count; j++)
@@ -81,6 +88,7 @@ namespace BrickBreakerGame
                 }
             }
 
+            // Fjern gameObjects der skal fjernes
             foreach (GameObject gameObject in removeObjects)
             {
                 gameObjects.Remove(gameObject);
@@ -106,6 +114,11 @@ namespace BrickBreakerGame
             base.Draw(gameTime);
         }
 
+        public void AddActivePower(Power power)
+        {
+            activePowers.Add(power);
+        }
+
         public void AddGameObject(GameObject newObject)
         {
             gameObjects.Add(newObject);
@@ -116,6 +129,45 @@ namespace BrickBreakerGame
             if (!removeObjects.Contains(removeObject))
             {
                 removeObjects.Add(removeObject);
+            }
+        }
+
+        private void UpdateActivePowers(GameTime gameTime)
+        {
+            for (int i = activePowers.Count - 1; i >= 0; i--)
+            {
+                Power power = activePowers[i];
+                power.UpdatePowerEffect(gameTime);
+
+                // Hvis effekten er færdig, fjern den
+                if (power.IsEffectCompleted())
+                {
+                    DeactivatePower(power);
+                    activePowers.RemoveAt(i);
+                }
+            }
+        }
+
+        private void DeactivatePower(Power power)
+        {
+            // Brug den aktuelle effekt for at deaktivere
+            switch (power.Effect)
+            {
+                case "IncreasePaddleSize":
+                    paddle.DecreaseSize(); // Gør paddlen mindre igen
+                    break;
+
+                case "ReducePaddleSize":
+                    paddle.IncreaseSize(); // Gør paddlen normal igen
+                    break;
+
+                case "IncreaseBallSpeed":
+                    ball.DecreaseSpeed(); // Reducer boldens hastighed til normal
+                    break;
+
+                case "ReduceBallSpeed":
+                    ball.IncreaseSpeed(); // Øg boldens hastighed tilbage til normal
+                    break;
             }
         }
 
