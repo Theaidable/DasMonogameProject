@@ -13,11 +13,28 @@ namespace BrickBreakerGame
     {
         private int hitPoints;
         private bool isIndestructable;
+        private int points;
 
         public Brick(int initialHitPoints, bool indestructiable = false)
         {
             hitPoints = initialHitPoints;
             isIndestructable = indestructiable;
+            // Tildel point baseret på murstenens hitPoints
+            switch (hitPoints)
+            {
+                case 1:
+                    points = 100; // Grøn mursten
+                    break;
+                case 2:
+                    points = 200; // Gul mursten
+                    break;
+                case 3:
+                    points = 300; // Rød mursten
+                    break;
+                default:
+                    points = 0;
+                    break;
+            }
         }
 
         public override void LoadContent(ContentManager content)
