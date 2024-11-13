@@ -16,5 +16,12 @@ namespace BrickBreakerGame
             Score = 0;
             HighScore = 0;
         }
-
+        public void AddPoints(int points)
+        {
+            Score += points;
+            if (Score > HighScore)
+            {
+                HighScore = Score;
+            }
+        }
     }
