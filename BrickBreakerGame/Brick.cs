@@ -52,11 +52,28 @@ namespace BrickBreakerGame
             {
                 hitPoints--;
 
+                if (hitPoints > 0)
+                {
+                    UpdateSprite(GameWorld.Instance.Content);
+                }
+
                 if (hitPoints <= 0)
                 {
                     IsMarkedForRemoval = true;
                     GameWorld.Instance.RemoveGameObject(this);
                 }
+            }
+        }
+
+        private void UpdateSprite(ContentManager content)
+        {
+            if (hitPoints == 1)
+            {
+                sprite = content.Load<Texture2D>("BricksSquareSprites/BrickSquare003");
+            }
+            else if (hitPoints == 2)
+            {
+                sprite = content.Load<Texture2D>("BricksSquareSprites/BrickSquare005");
             }
         }
     }
