@@ -102,5 +102,15 @@ namespace BrickBreakerGame
                 }
             }
         }
+
+        public void IncreaseSpeed()
+        {
+            speed += 50f;
+        }
+
+        public void DecreaseSpeed()
+        {
+            speed = Math.Max(100f, speed - 50f);
+        }
     }
 }

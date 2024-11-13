@@ -1,5 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
+using System;
 using System.Collections.Generic;
 
 namespace BrickBreakerGame
@@ -8,6 +9,7 @@ namespace BrickBreakerGame
     {
         private ContentManager content;
         private int hitPoints;
+        private Random random = new Random();
 
         public LevelManager(ContentManager content)
         {
@@ -80,6 +82,23 @@ namespace BrickBreakerGame
 
                 indestructibleBrick.Position = new Vector2(xPosition, yPosition);
                 gameObjects.Add(indestructibleBrick);
+            }
+
+            for (int i = 0; i < gameObjects.Count; i++)
+            {
+                if (gameObjects[i] is Brick brick && !brick.IsIndestructible)
+                {
+                    int randomChance = random.Next(100); // Generer et tal mellem 0 og 99
+                    if (randomChance < 20) // 20% chance for en Power
+                    {
+                        Power.PowerType powerType = randomChance < 10 ? Power.PowerType.PowerUp : Power.PowerType.PowerDown;
+                        string effect = powerType == Power.PowerType.PowerUp ? "IncreasePaddleSize" : "ReducePaddleSize";
+
+                        Power power = new Power(powerType, effect);
+                        power.LoadContent(content);
+                        brick.PowerContained = power;
+                    }
+                }
             }
         }
     }
