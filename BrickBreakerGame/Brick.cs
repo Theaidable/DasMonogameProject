@@ -8,6 +8,7 @@ namespace BrickBreakerGame
     {
         private int hitPoints;
         private bool isIndestructible;
+        private int points;
         public bool IsMarkedForRemoval { get; private set; }
         public bool IsIndestructible { get => isIndestructible; set => isIndestructible = value; }
 
@@ -19,6 +20,22 @@ namespace BrickBreakerGame
             isIndestructible = indestructible;
             IsMarkedForRemoval = false;
             PowerContained = power;
+            ///Giv points i forhold til hitpoints(Farve)
+            switch (hitPoints)
+            {
+                case 1:
+                    points = 100; // Grøn mursten
+                    break;
+                case 2:
+                    points = 200; // Gul mursten
+                    break;
+                case 3:
+                    points = 300; // Rød mursten
+                    break;
+                default:
+                    points = 0;
+                    break;
+            }
         }
 
         public override void LoadContent(ContentManager content)
@@ -64,6 +81,9 @@ namespace BrickBreakerGame
                 {
                     IsMarkedForRemoval = true;
                     GameWorld.Instance.RemoveGameObject(this);
+                    
+                    // Tilføj point baseret på murstenens farve
+                    GameWorld.Instance.AddPointsToScore(points); 
 
                     // Hvis murstenen har en Power, slip den
                     if (PowerContained != null)
