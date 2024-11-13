@@ -104,9 +104,18 @@ namespace BrickBreakerGame
                 gameObject.Draw(_spriteBatch);
             }
 
+            // Tegn score på skærmen
+            _spriteBatch.DrawString(font, $"Score: {scoreManager.Score}", new Vector2(10, 10), Color.White);
+            _spriteBatch.DrawString(font, $"High Score: {scoreManager.HighScore}", new Vector2(10, 30), Color.White);
+
             _spriteBatch.End();
 
             base.Draw(gameTime);
+        }
+        ///Function til at kalde AddPoints i OnCollision når man rammer en brick
+        public void AddPointsToScore(int points)
+        {
+            scoreManager.AddPoints(points);
         }
 
         public void AddGameObject(GameObject newObject)
