@@ -16,6 +16,7 @@ namespace BrickBreakerGame
             Score = 0;
             HighScore = 0;
         }
+        ///AddPoints Function til spillet
         public void AddPoints(int points)
         {
             Score += points;
@@ -23,5 +24,10 @@ namespace BrickBreakerGame
             {
                 HighScore = Score;
             }
+        }
+        ///Function til at ResetScore
+        public void ResetScore()
+        {
+            Score = 0;
         }
     }
