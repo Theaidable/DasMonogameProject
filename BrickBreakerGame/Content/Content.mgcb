@@ -973,6 +973,13 @@
 /processorParam:TextureFormat=Color
 /build:BricksThickSprites/BrickThick017.png
 
+#begin Font.spritefont
+/importer:FontDescriptionImporter
+/processor:FontDescriptionProcessor
+/processorParam:PremultiplyAlpha=True
+/processorParam:TextureFormat=Compressed
+/build:Font.spritefont
+
 #begin LifeSprites/Life000.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -1284,6 +1291,13 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:PaddleSprites/Paddle017.png
+
+#begin ScoreFont.spritefont
+/importer:FontDescriptionImporter
+/processor:FontDescriptionProcessor
+/processorParam:PremultiplyAlpha=True
+/processorParam:TextureFormat=Compressed
+/build:ScoreFont.spritefont
 
 #begin tile_racoon.png
 /importer:TextureImporter

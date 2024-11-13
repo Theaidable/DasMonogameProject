@@ -31,6 +31,7 @@ namespace BrickBreakerGame
             //Initialsier liste med alle game objects
             gameObjects = new List<GameObject>();
             removeObjects = new List<GameObject>();
+            scoreManager = new ScoreManager();
 
             // Initialiser skærmstørrelse
             Width = _graphics.PreferredBackBufferWidth;
@@ -44,6 +45,9 @@ namespace BrickBreakerGame
             _spriteBatch = new SpriteBatch(GraphicsDevice);
 
             // TODO: use this.Content to load your game content here
+            
+            // Indlæs font
+            scoreFont = Content.Load<SpriteFont>("ScoreFont");
 
             //Indlæs debug-texutre i GameObject-klassen
             GameObject.LoadDebugContent(GraphicsDevice);
@@ -104,9 +108,11 @@ namespace BrickBreakerGame
                 gameObject.Draw(_spriteBatch);
             }
 
-            // Tegn score på skærmen
-            _spriteBatch.DrawString(font, $"Score: {scoreManager.Score}", new Vector2(10, 10), Color.White);
-            _spriteBatch.DrawString(font, $"High Score: {scoreManager.HighScore}", new Vector2(10, 30), Color.White);
+            
+            // Tegn score og highscore på skærmen
+            _spriteBatch.DrawString(scoreFont, $"Score: {scoreManager.Score}", new Vector2(10, 30), Color.White);
+            _spriteBatch.DrawString(scoreFont, $"High Score: {scoreManager.HighScore}", new Vector2(10, 10), Color.White);
+
 
             _spriteBatch.End();
 

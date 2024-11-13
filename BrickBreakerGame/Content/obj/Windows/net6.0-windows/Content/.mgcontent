@@ -110,9 +110,11 @@
     <File>C:/Users/keamp/Documents/GitHub/DasMonogameProject/BrickBreakerGame/Content/PaddleSprites/Paddle015.png</File>
     <File>C:/Users/keamp/Documents/GitHub/DasMonogameProject/BrickBreakerGame/Content/PaddleSprites/Paddle016.png</File>
     <File>C:/Users/keamp/Documents/GitHub/DasMonogameProject/BrickBreakerGame/Content/PaddleSprites/Paddle017.png</File>
+    <File>C:/Users/keamp/Documents/GitHub/DasMonogameProject/BrickBreakerGame/Content/ScoreFont.spritefont</File>
     <File>C:/Users/keamp/Documents/GitHub/DasMonogameProject/BrickBreakerGame/Content/tile_racoon.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

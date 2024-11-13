@@ -74,6 +74,7 @@ namespace BrickBreakerGame
 
                 if (hitPoints <= 0)
                 {
+                    GameWorld.Instance.AddPointsToScore(points);
                     GameWorld.Instance.RemoveGameObject(this);
                 }
             }
