@@ -6,7 +6,15 @@ using System.Threading.Tasks;
 
 namespace BrickBreakerGame
 {
-    internal class ScoreManager
+    public class ScoreManager
     {
+        public int Score { get; private set; }
+        public int HighScore { get; private set; }
+
+        public ScoreManager()
+        {
+            Score = 0;
+            HighScore = 0;
+        }
+
     }
-}
