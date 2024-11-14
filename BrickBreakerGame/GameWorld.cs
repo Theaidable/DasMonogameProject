@@ -12,6 +12,7 @@ namespace BrickBreakerGame
         private LevelManager levelManager;
         private ScoreManager scoreManager;        
         private SpriteFont scoreFont;
+        private bool isGameOver;
 
         public SoundManager soundManager;
         public Paddle paddle;
@@ -31,6 +32,7 @@ namespace BrickBreakerGame
             Content.RootDirectory = "Content";
             IsMouseVisible = true;
             Instance = this;
+            isGameOver = false;
         }
 
         protected override void Initialize()
@@ -82,16 +84,49 @@ namespace BrickBreakerGame
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
 
+            if (isGameOver)
+            {
+                HandleGameOverInput(); // Håndter input for at restarte eller stoppe
+                return;
+            }
+
             // Opdater gameObjects som normalt
             foreach (GameObject gameObject in gameObjects)
             {
                 gameObject.Update(gameTime);
             }
 
-            // Opdater aktive Power-effekter
             UpdateActivePowers(gameTime);
+            HandleCollisions();
+
+            // Opdater aktive Power-effekter
+            //UpdateActivePowers(gameTime);
 
             // Kollisionsdetektion
+            //for (int i = 0; i < gameObjects.Count; i++)
+            //{
+            //    for (int j = i + 1; j < gameObjects.Count; j++)
+            //    {
+            //        if (gameObjects[i].CheckCollision(gameObjects[j]))
+            //        {
+            //            gameObjects[i].OnCollision(gameObjects[j]);
+            //            gameObjects[j].OnCollision(gameObjects[i]);
+            //        }
+            //    }
+            //}
+
+            // Fjern gameObjects der skal fjernes
+            foreach (GameObject gameObject in removeObjects)
+            {
+                gameObjects.Remove(gameObject);
+            }
+            removeObjects.Clear();
+
+            base.Update(gameTime);
+        }
+        private void HandleCollisions()
+        {
+            // Kollisionsdetektion mellem gameObjects
             for (int i = 0; i < gameObjects.Count; i++)
             {
                 for (int j = i + 1; j < gameObjects.Count; j++)
@@ -103,15 +138,37 @@ namespace BrickBreakerGame
                     }
                 }
             }
+        }
 
-            // Fjern gameObjects der skal fjernes
-            foreach (GameObject gameObject in removeObjects)
+
+        private void HandleGameOverInput()
+        {
+            KeyboardState keyState = Keyboard.GetState();
+            if (keyState.IsKeyDown(Keys.R)) // Tryk 'R' for at genstarte spillet
             {
-                gameObjects.Remove(gameObject);
+                RestartGame();
             }
-            removeObjects.Clear();
+            else if (keyState.IsKeyDown(Keys.Q)) // Tryk 'Q' for at afslutte spillet
+            {
+                Exit();
+            }
+        }
 
-            base.Update(gameTime);
+        private void RestartGame()
+        {
+            isGameOver = false;
+            scoreManager.ResetScore();
+
+            // Nulstil boldens position
+            ball.Position = new Vector2(paddle.Position.X, paddle.Position.Y - paddle.Sprite.Height / 2 - ball.Sprite.Height / 2 - 5);
+            ball.ResetDirectionAndSpeed();
+
+            // Genopret niveauet og paddle
+            gameObjects.Clear();
+            removeObjects.Clear();
+            levelManager.CreateFirstLevel(gameObjects);
+            AddGameObject(paddle);
+            AddGameObject(ball);
         }
 
         protected override void Draw(GameTime gameTime)
@@ -120,17 +177,32 @@ namespace BrickBreakerGame
 
             _spriteBatch.Begin();
 
-            foreach (GameObject gameObject in gameObjects)
+            if (isGameOver)
             {
-                gameObject.Draw(_spriteBatch);
+                _spriteBatch.DrawString(scoreFont, "Game Over! Press 'R' to Restart or 'Q' to Quit", new Vector2(100, Height / 2), Color.Red);
             }
-            // Tegn score og highscore på skærmen
-            _spriteBatch.DrawString(scoreFont, $"Score: {scoreManager.Score}", new Vector2(10, 10), Color.Black);
-            _spriteBatch.DrawString(scoreFont, $"High Score: {scoreManager.HighScore}", new Vector2(10, 30), Color.Black);
+            else
+            {
+                foreach (GameObject gameObject in gameObjects)
+                {
+                    gameObject.Draw(_spriteBatch);
+                }
+                // Tegn score og highscore på skærmen
+                _spriteBatch.DrawString(scoreFont, $"Score: {scoreManager.Score}", new Vector2(10, 10), Color.Black);
+                _spriteBatch.DrawString(scoreFont, $"High Score: {scoreManager.HighScore}", new Vector2(10, 30), Color.Black);
+
+            }
 
             _spriteBatch.End();
 
             base.Draw(gameTime);
+        }
+
+        // Kald denne metode, når bolden falder ud af bunden i Ball.cs
+        public void OnBallLost()
+        {
+            isGameOver = true;
+            soundManager.PlaySound("game_over");
         }
 
         // Kald AddPoints i OnCollision, når bolden rammer en mursten

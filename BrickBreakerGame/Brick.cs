@@ -85,7 +85,9 @@ namespace BrickBreakerGame
                     IsMarkedForRemoval = true;
                     GameWorld.Instance.RemoveGameObject(this);
                     // Tilføj specifikke point baseret på murstenens farve
-                    GameWorld.Instance.AddPointsToScore(points); 
+                    GameWorld.Instance.AddPointsToScore(points);
+                    GameWorld.Instance.soundManager.PlaySound("brick_break"); // Afspil lyd, når mursten ødelægges
+
                     // Hvis murstenen har en Power, slip den
                     if (PowerContained != null)
                     {

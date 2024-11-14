@@ -12,7 +12,7 @@ namespace BrickBreakerGame
 
         public Ball()
         {
-            speed = 300f; // Juster efter spillets ønskede sværhedsgrad
+            speed = 250f; // Juster efter spillets ønskede sværhedsgrad
 
             // Tilføj lidt tilfældighed til boldens startretning
             Random random = new Random();
@@ -28,6 +28,13 @@ namespace BrickBreakerGame
             origin = new Vector2(sprite.Width / 2, sprite.Height / 2);
         }
 
+        public void ResetDirectionAndSpeed()
+        {
+            speed = 250f; // Gendan standardhastigheden
+            direction = new Vector2(0, -1); // Ret bolden opad
+            direction.Normalize(); // Normaliser retningen for at sikre enhedslængde
+        }
+
         public override void Update(GameTime gameTime)
         {
             position += direction * speed * GameWorld.DeltaTime(gameTime);
@@ -36,15 +43,17 @@ namespace BrickBreakerGame
             if (position.X - origin.X < 0 || position.X + origin.X > GameWorld.Width)
             {
                 direction.X *= -1; // Skift vandret retning
+                GameWorld.Instance.soundManager.PlaySound("wall_hit"); // Afspil lyd, når bolden rammer væggen
             }
             if (position.Y - origin.Y < 0)
             {
                 direction.Y *= -1; // Skift lodret retning
+                GameWorld.Instance.soundManager.PlaySound("wall_hit"); // Afspil lyd, når bolden rammer væggen
             }
             if (position.Y + origin.Y > GameWorld.Height)
             {
                 // Bolden er faldet ud af bunden
-                // Håndter livstab eller genstart bolden
+                GameWorld.Instance.OnBallLost(); // Håndter livstab eller genstart bolden
             }
         }
 

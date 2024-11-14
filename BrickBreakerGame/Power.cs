@@ -27,7 +27,7 @@ namespace BrickBreakerGame
         {
             if (Type == PowerType.PowerUp)
             {
-                sprite = content.Load<Texture2D>("LifeSprites/Life002"); // Brug en sprite for PowerUp
+                sprite = content.Load<Texture2D>("LifeSprites/Life007"); // Brug en sprite for PowerUp
             }
             else if (Type == PowerType.PowerDown)
             {
@@ -66,6 +66,7 @@ namespace BrickBreakerGame
             if (other is Paddle)
             {
                 ActivateEffect();
+                GameWorld.Instance.soundManager.PlaySound("pick_up"); // Afspil lyd, når paddle samler power-up op
 
                 // Tilføj til aktive effekter og fjern kun power-ikonet fra visningen
                 GameWorld.Instance.AddActivePower(this);
