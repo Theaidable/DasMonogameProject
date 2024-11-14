@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <SourceFile>C:/Users/keamp/Documents/GitHub/DasMonogameProject/BrickBreakerGame/Content/tile_racoon.png</SourceFile>
-  <SourceTime>2024-11-14T13:21:51.7165979+01:00</SourceTime>
-  <DestFile>C:/Users/keamp/Documents/GitHub/DasMonogameProject/BrickBreakerGame/Content/bin/Windows/Content/tile_racoon.xnb</DestFile>
-  <DestTime>2024-11-14T13:24:00.1921582+01:00</DestTime>
+  <SourceFile>C:/Users/Simon/Documents/GitHub/DasMonogameProject/BrickBreakerGame/Content/tile_racoon.png</SourceFile>
+  <SourceTime>2024-11-14T12:58:09.8632887+01:00</SourceTime>
+  <DestFile>C:/Users/Simon/Documents/GitHub/DasMonogameProject/BrickBreakerGame/Content/bin/Windows/Content/tile_racoon.xnb</DestFile>
+  <DestTime>2024-11-14T13:38:31.6054577+01:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2022-07-26T13:44:56+02:00</ImporterTime>
   <Processor>TextureProcessor</Processor>
