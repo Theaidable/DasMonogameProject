@@ -8,7 +8,7 @@ namespace BrickBreakerGame
     public class SoundManager
     {
         private Dictionary<string, SoundEffect> soundEffects;
-        private Song backgroundMusic;
+        //private Song backgroundMusic;
 
         public SoundManager()
         {
@@ -28,7 +28,7 @@ namespace BrickBreakerGame
             soundEffects["pick_up"] = content.Load<SoundEffect>("PickUp2");
 
             // Indlæs evt. baggrundsmusik
-            backgroundMusic = content.Load<Song>("background_music"); // PH
+            // backgroundMusic = content.Load<Song>("background_music"); // PH
         }
 
         public void PlaySound(string soundName)
@@ -39,15 +39,15 @@ namespace BrickBreakerGame
             }
         }
 
-        public void PlayBackgroundMusic()
-        {
-            MediaPlayer.IsRepeating = true;
-            MediaPlayer.Play(backgroundMusic);
-        }
+        //public void PlayBackgroundMusic()
+        //{
+        //    MediaPlayer.IsRepeating = true;
+        //    MediaPlayer.Play(backgroundMusic);
+        //}
 
-        public void StopBackgroundMusic()
-        {
-            MediaPlayer.Stop();
-        }
+        //public void StopBackgroundMusic()
+        //{
+        //    MediaPlayer.Stop();
+        //}
     }
 }

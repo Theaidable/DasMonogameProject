@@ -20,7 +20,7 @@ namespace BrickBreakerGame
         public override void LoadContent(ContentManager content)
         {
             // Indlæs paddle-sprite
-            sprite = content.Load<Texture2D>("black_paddle");
+            sprite = content.Load<Texture2D>("Paddle002");
             origin = new Vector2(sprite.Width / 2, sprite.Height / 2);
         }
 

@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Simon\\Documents\\GitHub\\DasMonogameProject\\BrickBreakerGame\\BrickBreakerGame.csproj": {}
+    "D:\\Github Repos\\DasMonogameProject\\BrickBreakerGame\\BrickBreakerGame.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Simon\\Documents\\GitHub\\DasMonogameProject\\BrickBreakerGame\\BrickBreakerGame.csproj": {
+    "D:\\Github Repos\\DasMonogameProject\\BrickBreakerGame\\BrickBreakerGame.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Simon\\Documents\\GitHub\\DasMonogameProject\\BrickBreakerGame\\BrickBreakerGame.csproj",
+        "projectUniqueName": "D:\\Github Repos\\DasMonogameProject\\BrickBreakerGame\\BrickBreakerGame.csproj",
         "projectName": "BrickBreakerGame",
-        "projectPath": "C:\\Users\\Simon\\Documents\\GitHub\\DasMonogameProject\\BrickBreakerGame\\BrickBreakerGame.csproj",
-        "packagesPath": "C:\\Users\\Simon\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Simon\\Documents\\GitHub\\DasMonogameProject\\BrickBreakerGame\\obj\\",
+        "projectPath": "D:\\Github Repos\\DasMonogameProject\\BrickBreakerGame\\BrickBreakerGame.csproj",
+        "packagesPath": "C:\\Users\\Aidrian\\.nuget\\packages\\",
+        "outputPath": "D:\\Github Repos\\DasMonogameProject\\BrickBreakerGame\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Simon\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Aidrian\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,7 +26,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -43,9 +42,8 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "all"
-        },
-        "SdkAnalysisLevel": "9.0.100"
+          "auditMode": "direct"
+        }
       },
       "frameworks": {
         "net6.0-windows7.0": {
@@ -74,19 +72,19 @@
           "downloadDependencies": [
             {
               "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[6.0.36, 6.0.36]"
+              "version": "[6.0.35, 6.0.35]"
             },
             {
               "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[6.0.36, 6.0.36]"
+              "version": "[6.0.35, 6.0.35]"
             },
             {
               "name": "Microsoft.NETCore.App.Ref",
-              "version": "[6.0.36, 6.0.36]"
+              "version": "[6.0.35, 6.0.35]"
             },
             {
               "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[6.0.36, 6.0.36]"
+              "version": "[6.0.35, 6.0.35]"
             }
           ],
           "frameworkReferences": {
@@ -97,7 +95,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     }

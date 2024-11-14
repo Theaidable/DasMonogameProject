@@ -34,8 +34,6 @@
     <File>D:/Github Repos/DasMonogameProject/BrickBreakerGame/Content/BallSprites/Ball032.png</File>
     <File>D:/Github Repos/DasMonogameProject/BrickBreakerGame/Content/BallSprites/Ball033.png</File>
     <File>D:/Github Repos/DasMonogameProject/BrickBreakerGame/Content/BallSprites/Ball034.png</File>
-    <File>D:/Github Repos/DasMonogameProject/BrickBreakerGame/Content/black_ball.png</File>
-    <File>D:/Github Repos/DasMonogameProject/BrickBreakerGame/Content/black_paddle.png</File>
     <File>D:/Github Repos/DasMonogameProject/BrickBreakerGame/Content/BricksSlimSprites/BrickSlim000.png</File>
     <File>D:/Github Repos/DasMonogameProject/BrickBreakerGame/Content/BricksSlimSprites/BrickSlim001.png</File>
     <File>D:/Github Repos/DasMonogameProject/BrickBreakerGame/Content/BricksSlimSprites/BrickSlim002.png</File>
@@ -121,12 +119,8 @@
     <File>D:/Github Repos/DasMonogameProject/BrickBreakerGame/Content/Sounds/PickUp.wav</File>
     <File>D:/Github Repos/DasMonogameProject/BrickBreakerGame/Content/Sounds/PickUp2.wav</File>
     <File>D:/Github Repos/DasMonogameProject/BrickBreakerGame/Content/Sounds/WallHit.wav</File>
-    <File>D:/Github Repos/DasMonogameProject/BrickBreakerGame/Content/tile_racoon.png</File>
   </SourceFiles>
   <DestFiles>
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
-    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

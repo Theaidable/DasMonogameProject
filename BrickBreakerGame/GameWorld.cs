@@ -10,9 +10,10 @@ namespace BrickBreakerGame
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
         private LevelManager levelManager;
-        private ScoreManager scoreManager;
-        private SoundManager soundManager;
+        private ScoreManager scoreManager;        
         private SpriteFont scoreFont;
+
+        public SoundManager soundManager;
         public Paddle paddle;
         public Ball ball;
 
@@ -73,7 +74,7 @@ namespace BrickBreakerGame
             //soundManager.PlaySound("game_over");  // Test af lyd
 
             // Afspil baggrundsmusik
-            soundManager.PlayBackgroundMusic();
+            //soundManager.PlayBackgroundMusic();
         }
 
         protected override void Update(GameTime gameTime)
