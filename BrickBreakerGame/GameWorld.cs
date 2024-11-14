@@ -10,6 +10,8 @@ namespace BrickBreakerGame
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
         private LevelManager levelManager;
+        private ScoreManager scoreManager;
+        private SpriteFont scoreFont;
         public Paddle paddle;
         public Ball ball;
 
@@ -34,6 +36,7 @@ namespace BrickBreakerGame
             gameObjects = new List<GameObject>();
             removeObjects = new List<GameObject>();
             activePowers = new List<Power>();
+            scoreManager = new ScoreManager();
 
             Width = _graphics.PreferredBackBufferWidth;
             Height = _graphics.PreferredBackBufferHeight;
@@ -46,6 +49,8 @@ namespace BrickBreakerGame
             _spriteBatch = new SpriteBatch(GraphicsDevice);
 
             GameObject.LoadDebugContent(GraphicsDevice);
+            // Indlæs font
+            scoreFont = Content.Load<SpriteFont>("ScoreFont");
 
             // Opret Paddle og Ball
             paddle = new Paddle();
@@ -108,10 +113,19 @@ namespace BrickBreakerGame
             {
                 gameObject.Draw(_spriteBatch);
             }
+            // Tegn score og highscore på skærmen
+            _spriteBatch.DrawString(scoreFont, $"Score: {scoreManager.Score}", new Vector2(10, 10), Color.Black);
+            _spriteBatch.DrawString(scoreFont, $"High Score: {scoreManager.HighScore}", new Vector2(10, 30), Color.Black);
 
             _spriteBatch.End();
 
             base.Draw(gameTime);
+        }
+
+        // Kald AddPoints i OnCollision, når bolden rammer en mursten
+        public void AddPointsToScore(int points)
+        {
+            scoreManager.AddPoints(points);
         }
 
         public void AddActivePower(Power power)

@@ -14,6 +14,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = BrickBreakerGame
-build_property.ProjectDir = C:\Users\david\OneDrive\Desktop\School\HAGI\DasMonogameProject\BrickBreakerGame\
+build_property.ProjectDir = C:\Users\keamp\Documents\GitHub\DasMonogameProject\BrickBreakerGame\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

@@ -1285,6 +1285,13 @@
 /processorParam:TextureFormat=Color
 /build:PaddleSprites/Paddle017.png
 
+#begin scoreFont.spritefont
+/importer:FontDescriptionImporter
+/processor:FontDescriptionProcessor
+/processorParam:PremultiplyAlpha=True
+/processorParam:TextureFormat=Compressed
+/build:scoreFont.spritefont
+
 #begin tile_racoon.png
 /importer:TextureImporter
 /processor:TextureProcessor
