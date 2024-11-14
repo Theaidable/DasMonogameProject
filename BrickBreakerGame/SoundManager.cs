@@ -17,15 +17,18 @@ namespace BrickBreakerGame
 
         public void LoadContent(ContentManager content)
         {
-            // Find/Producer de lydeffekter der skal bruges
-            
             // Indlæs lydeffekter
-            soundEffects["brick_hit"] = content.Load<SoundEffect>("brick_hit");     // PH
-            soundEffects["paddle_hit"] = content.Load<SoundEffect>("paddle_hit");   // PH
-            soundEffects["ball_loss"] = content.Load<SoundEffect>("ball_loss");     // PH
+            soundEffects["wall_hit"] = content.Load<SoundEffect>("WallHit");
+            soundEffects["ball_lost"] = content.Load<SoundEffect>("BallLost");
+            soundEffects["brick_break"] = content.Load<SoundEffect>("BrickBreak");
+            soundEffects["brick_hit"] = content.Load<SoundEffect>("BrickHit");
+            soundEffects["game_over"] = content.Load<SoundEffect>("GameOver");
+            soundEffects["level_win"] = content.Load<SoundEffect>("LevelWin");
+            soundEffects["paddle_hit"] = content.Load<SoundEffect>("PaddleHit2");
+            soundEffects["pick_up"] = content.Load<SoundEffect>("PickUp2");
 
-            // Indlæs baggrundsmusik
-            backgroundMusic = content.Load<Song>("background_music");               // PH
+            // Indlæs evt. baggrundsmusik
+            backgroundMusic = content.Load<Song>("background_music"); // PH
         }
 
         public void PlaySound(string soundName)
@@ -38,10 +41,9 @@ namespace BrickBreakerGame
 
         public void PlayBackgroundMusic()
         {
-            MediaPlayer.IsRepeating = true; // Gentag musikken
+            MediaPlayer.IsRepeating = true;
             MediaPlayer.Play(backgroundMusic);
         }
-           
 
         public void StopBackgroundMusic()
         {

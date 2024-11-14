@@ -52,6 +52,9 @@ namespace BrickBreakerGame
         {
             if (other is Paddle paddle)
             {
+                // Afspil paddle hit-lyd
+                GameWorld.Instance.soundManager.PlaySound("paddle_hit");
+
                 // Differencen mellem boldens position og paddlens position
                 float offset = position.X - paddle.Position.X;
 
@@ -66,6 +69,9 @@ namespace BrickBreakerGame
             }
             else if (other is Brick brick)
             {
+                // Afspil brick hit-lyd
+                GameWorld.Instance.soundManager.PlaySound("brick_hit");
+
                 // Bestem kollisionens retning baseret på boldens og murstenens position
                 float ballLeft = position.X - origin.X;
                 float ballRight = position.X + origin.X;
