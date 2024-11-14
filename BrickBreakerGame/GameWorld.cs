@@ -114,8 +114,8 @@ namespace BrickBreakerGame
                 gameObject.Draw(_spriteBatch);
             }
             // Tegn score og highscore på skærmen
-            _spriteBatch.DrawString(scoreFont, $"Score: {scoreManager.Score}", new Vector2(10, 10), Color.White);
-            _spriteBatch.DrawString(scoreFont, $"High Score: {scoreManager.HighScore}", new Vector2(10, 30), Color.White);
+            _spriteBatch.DrawString(scoreFont, $"Score: {scoreManager.Score}", new Vector2(10, 10), Color.Black);
+            _spriteBatch.DrawString(scoreFont, $"High Score: {scoreManager.HighScore}", new Vector2(10, 30), Color.Black);
 
             _spriteBatch.End();
 
