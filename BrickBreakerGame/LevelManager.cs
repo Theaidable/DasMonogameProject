@@ -5,17 +5,30 @@ using System.Collections.Generic;
 
 namespace BrickBreakerGame
 {
+    /// <summary>
+    /// LevelManager klassen er ansvarlig for håndtere og skabe niveauer i spillet.
+    /// Den opretter mursten med forskellige egenskaber og placerer dem i niveauet.
+    /// </summary>
     public class LevelManager
     {
+        // Fields
         private ContentManager content;
         private int hitPoints;
         private Random random = new Random();
 
+        /// <summary>
+        /// Constructor for LevelManager klassen.
+        /// </summary>
+        /// <param name="content"></param> ContentMAnager er for at indlæse spilindholdet.
         public LevelManager(ContentManager content)
         {
             this.content = content;
         }
 
+        /// <summary>
+        /// Opretter det første niveau i spillet med mursten og placerer dem på skærmen
+        /// </summary>
+        /// <param name="gameObjects"></param> Liste over spilobjekter som mursten, der skal tilføjes til spillet.
         public void CreateFirstLevel(List<GameObject> gameObjects)
         {
             int topMargin = 50; // Margin fra toppen af skærmen

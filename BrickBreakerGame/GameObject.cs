@@ -4,28 +4,39 @@ using Microsoft.Xna.Framework.Content;
 
 namespace BrickBreakerGame
 {
+    /// <summary>
+    /// Abstrakt baseklasse, som repræsentere et spilobjekt i brick Breaker spillet.
+    /// Alle objekter i spillet arver fra denne klasse
+    /// </summary>
     public abstract class GameObject
     {
+        //Fields
         protected Vector2 position;
         protected Texture2D sprite;
         protected Vector2 origin;
         private static Texture2D collisionTexture;
 
-        // Offentlig egenskab til at få adgang til position
+        /// <summary>
+        /// Offentlig property til at få objektes position.
+        /// </summary>
         public Vector2 Position
         {
             get { return position; }
             set { position = value; }
         }
 
-        // Offentlig egenskab til at få adgang til sprite
+        /// <summary>
+        /// Offentlig property til at få objektes sprite.
+        /// </summary>
         public Texture2D Sprite
         {
             get { return sprite; }
             set { sprite = value; }
         }
 
-        // Egenskab der giver en Rectangle for kollisionsboksen
+        /// <summary>
+        /// Offentlig property der returnere en Rectangle for objektets kollisionsboks
+        /// </summary>
         public Rectangle CollisionBox
         {
             get
@@ -39,7 +50,10 @@ namespace BrickBreakerGame
         public abstract void Update(GameTime gameTime);
         public abstract void OnCollision(GameObject other);
 
-        // Standard LoadContent-metode til at indlæse collisionTexture
+        /// <summary>
+        /// Indlæser debug-tekstur til at vise kollsionsboksen for spilobjekter.
+        /// </summary>
+        /// <param name="graphicsDevice"></param> GraphicsDevice bruges til at skabe debug-teksturen.
         public static void LoadDebugContent(GraphicsDevice graphicsDevice)
         {
             if (collisionTexture == null)
@@ -49,7 +63,10 @@ namespace BrickBreakerGame
             }
         }
 
-        // Standard Draw-metode til at tegne objektet
+        /// <summary>
+        /// Tegner spilobjektet på skærmen
+        /// </summary>
+        /// <param name="spriteBatch"></param> SpriteBatch bruges til at tegne spilobjektet
         public virtual void Draw(SpriteBatch spriteBatch)
         {
             spriteBatch.Draw(sprite, position, null, Color.White, 0f, origin, 1f, SpriteEffects.None, 0f);
@@ -65,7 +82,11 @@ namespace BrickBreakerGame
             }
         }
 
-        // Metode til at tjekke kollision med et andet GameObject
+        /// <summary>
+        /// Tjekker om GameObject kolliderer med et andet GameObject
+        /// </summary>
+        /// <param name="other"></param> Det andet GameObject der tjekkes for kollision med.
+        /// <returns> Returnerer true, hvis der er en kollision, ellers returnerer den false</returns>
         public bool CheckCollision(GameObject other)
         {
             return this.CollisionBox.Intersects(other.CollisionBox);

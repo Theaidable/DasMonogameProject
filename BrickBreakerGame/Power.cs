@@ -4,25 +4,47 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace BrickBreakerGame
 {
+    /// <summary>
+    /// Repræsentere en PowerUp eller en PowerDown der har en effekt for spillet når den samles op af Paddle
+    /// </summary>
     public class Power : GameObject
     {
-        public enum PowerType { PowerUp, PowerDown }
-
-        public PowerType Type { get; set; }
-
-        public string Effect { get; set; }
-
+        // Fields
         private float speed = 150f;
         private float duration = 5f;
         private bool isEffectActive;
         private float effectTimer;
+        
+        /// <summary>
+        /// Enumurering for hvilken type af power (PowerUp eller PowerDown)
+        /// </summary>
+        public enum PowerType { PowerUp, PowerDown }
 
+        /// <summary>
+        /// Public property til at hente og definere typen af power (up eller down)
+        /// </summary>
+        public PowerType Type { get; set; }
+
+        /// <summary>
+        /// Public property til at hente og definere effekten af power
+        /// </summary>
+        public string Effect { get; set; }
+
+        /// <summary>
+        /// Initialisere en ny instance af "Power" klassen med en specefik type og effekt
+        /// </summary>
+        /// <param name="type"></param> Hvilken type af power (PowerUp eller PowerDown).
+        /// <param name="effect"></param> Hvilken effekt poweren har
         public Power(PowerType type, string effect)
         {
             Type = type;
             Effect = effect;
         }
 
+        /// <summary>
+        /// Indlæser indholdet for power objektet
+        /// </summary>
+        /// <param name="content"></param> ContentManger til at indlæse spritesene
         public override void LoadContent(ContentManager content)
         {
             if (Type == PowerType.PowerUp)
@@ -36,6 +58,10 @@ namespace BrickBreakerGame
             origin = new Vector2(sprite.Width / 2, sprite.Height / 2);
         }
 
+        /// <summary>
+        /// Opdatere powerens postion og håndterer effekttimeren.
+        /// </summary>
+        /// <param name="gameTime"></param> Spillets tidsinformation.
         public override void Update(GameTime gameTime)
         {
             if (!isEffectActive)
@@ -61,6 +87,10 @@ namespace BrickBreakerGame
             }
         }
 
+        /// <summary>
+        /// Håndterer kollision med andre objekter.
+        /// </summary>
+        /// <param name="other"></param> Det andet gameobject som Power kolliderer med.
         public override void OnCollision(GameObject other)
         {
             if (other is Paddle)
@@ -74,6 +104,9 @@ namespace BrickBreakerGame
             }
         }
 
+        /// <summary>
+        /// Aktiverer effekten afhængig af hvilken type det er.
+        /// </summary>
         private void ActivateEffect()
         {
             Paddle paddle = GameWorld.Instance.paddle;
@@ -102,6 +135,10 @@ namespace BrickBreakerGame
             effectTimer = 0f;
         }
 
+        /// <summary>
+        /// Opdatere den aktive effekt af poweren
+        /// </summary>
+        /// <param name="gameTime"></param> Spillets tidsinformation.
         public void UpdatePowerEffect(GameTime gameTime)
         {
             if (isEffectActive)
@@ -115,6 +152,10 @@ namespace BrickBreakerGame
             }
         }
 
+        /// <summary>
+        /// Tjekker om effekten er færdig.
+        /// </summary>
+        /// <returns>Returnerer true, hvis effekten er færdig</returns>
         public bool IsEffectCompleted()
         {
             return !isEffectActive; // Returnér true, hvis effekten er færdig

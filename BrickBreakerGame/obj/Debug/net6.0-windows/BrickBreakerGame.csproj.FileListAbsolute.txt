@@ -38,7 +38,6 @@ C:\Users\david\OneDrive\Desktop\School\HAGI\DasMonogameProject\BrickBreakerGame\
 C:\Users\david\OneDrive\Desktop\School\HAGI\DasMonogameProject\BrickBreakerGame\BrickBreaker_Test\obj\Debug\net6.0-windows\BrickBreakerGame.genruntimeconfig.cache
 C:\Users\david\OneDrive\Desktop\School\HAGI\DasMonogameProject\BrickBreakerGame\BrickBreaker_Test\obj\Debug\net6.0-windows\ref\BrickBreakerGame.dll
 C:\Users\david\OneDrive\Desktop\School\HAGI\DasMonogameProject\BrickBreakerGame\bin\Debug\net6.0-windows\Content\black_ball.xnb
-C:\Users\david\OneDrive\Desktop\School\HAGI\DasMonogameProject\BrickBreakerGame\bin\Debug\net6.0-windows\Content\tile_racoon.xnb
 C:\Users\david\OneDrive\Desktop\School\HAGI\DasMonogameProject\BrickBreakerGame\bin\Debug\net6.0-windows\BrickBreakerGame.exe
 C:\Users\david\OneDrive\Desktop\School\HAGI\DasMonogameProject\BrickBreakerGame\bin\Debug\net6.0-windows\BrickBreakerGame.deps.json
 C:\Users\david\OneDrive\Desktop\School\HAGI\DasMonogameProject\BrickBreakerGame\bin\Debug\net6.0-windows\BrickBreakerGame.runtimeconfig.json
@@ -630,3 +629,14 @@ D:\Github Repos\DasMonogameProject\BrickBreakerGame\bin\Debug\net6.0-windows\run
 D:\Github Repos\DasMonogameProject\BrickBreakerGame\obj\Debug\net6.0-windows\BrickBre.66974734.Up2Date
 D:\Github Repos\DasMonogameProject\BrickBreakerGame\obj\Debug\net6.0-windows\BrickBreakerGame.genruntimeconfig.cache
 D:\Github Repos\DasMonogameProject\BrickBreakerGame\obj\Debug\net6.0-windows\ref\BrickBreakerGame.dll
+C:\Users\david\OneDrive\Desktop\School\HAGI\DasMonogameProject\BrickBreakerGame\bin\Debug\net6.0-windows\Content\scoreFont.xnb
+C:\Users\david\OneDrive\Desktop\School\HAGI\DasMonogameProject\BrickBreakerGame\bin\Debug\net6.0-windows\Content\Sounds\BallLost.xnb
+C:\Users\david\OneDrive\Desktop\School\HAGI\DasMonogameProject\BrickBreakerGame\bin\Debug\net6.0-windows\Content\Sounds\BrickBreak.xnb
+C:\Users\david\OneDrive\Desktop\School\HAGI\DasMonogameProject\BrickBreakerGame\bin\Debug\net6.0-windows\Content\Sounds\BrickHit.xnb
+C:\Users\david\OneDrive\Desktop\School\HAGI\DasMonogameProject\BrickBreakerGame\bin\Debug\net6.0-windows\Content\Sounds\GameOver.xnb
+C:\Users\david\OneDrive\Desktop\School\HAGI\DasMonogameProject\BrickBreakerGame\bin\Debug\net6.0-windows\Content\Sounds\LevelWin.xnb
+C:\Users\david\OneDrive\Desktop\School\HAGI\DasMonogameProject\BrickBreakerGame\bin\Debug\net6.0-windows\Content\Sounds\PaddleHit.xnb
+C:\Users\david\OneDrive\Desktop\School\HAGI\DasMonogameProject\BrickBreakerGame\bin\Debug\net6.0-windows\Content\Sounds\PaddleHit2.xnb
+C:\Users\david\OneDrive\Desktop\School\HAGI\DasMonogameProject\BrickBreakerGame\bin\Debug\net6.0-windows\Content\Sounds\PickUp.xnb
+C:\Users\david\OneDrive\Desktop\School\HAGI\DasMonogameProject\BrickBreakerGame\bin\Debug\net6.0-windows\Content\Sounds\PickUp2.xnb
+C:\Users\david\OneDrive\Desktop\School\HAGI\DasMonogameProject\BrickBreakerGame\bin\Debug\net6.0-windows\Content\Sounds\WallHit.xnb
